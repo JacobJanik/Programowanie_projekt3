@@ -1,0 +1,50 @@
+﻿<Window x:Class="p4projekt3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:p4projekt3"
+        xmlns:vm="clr-namespace:p4projekt3.ViewModel"
+        Title="kjfakjsdakladsklj" Height="450" Width="600">
+    <Window.DataContext>
+        <vm:KierowcaViewModel />
+    </Window.DataContext>
+        
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="10">Imię Kierowcy</TextBlock>
+        <TextBox Grid.Row="0" Grid.Column="1" MaxHeight="25" Margin="10" Text="{Binding FirstName}"></TextBox>
+
+        <TextBlock Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" >Nazwisko Kierowcy</TextBlock>
+        <TextBox Grid.Row="1" Grid.Column="1" MaxHeight="25" Margin="10" Text="{Binding LastName}"></TextBox>
+
+        <TextBlock Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Margin="10" >Numer telefonu</TextBlock>
+
+        <TextBlock Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" Margin="10">Adres</TextBlock>
+        <TextBox Grid.Row="3" Grid.Column="1" MaxHeight="25" Margin="10" Text="{Binding Adres}"></TextBox>
+
+        <TextBlock Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" Margin="10">Data urodzenia</TextBlock>
+        <DatePicker Grid.Row="4" Grid.Column="1" MaxHeight="25" Margin="10" Text="{Binding Data_ur}"></DatePicker>
+
+        <TextBlock Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" Margin="10" >Numer rejestracyjny</TextBlock>
+
+        <TextBlock Grid.Row="4" Grid.Column="2" VerticalAlignment="Center" Margin="10" >Wybierz kierowcę</TextBlock>
+
+        <Button Grid.Row="5" Grid.Column="2" Margin="45,10,45,10" Grid.ColumnSpan="2" >Dodaj autobus</Button>
+        </Grid>
+</Window>
